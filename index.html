@@ -2,30 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="text">
-            <span class="task" style="color: blueviolet;">Tasks </span><span class="li">List</span>
+   <div class="main">
+   
+    <div class="parant">
+        <div class="navbar">
+            <div class="text">
+                <span class="task" style="color: blueviolet;">Tasks </span><span class="li">List</span>
+            </div>
+            <div class="link">
+                    <div class="icon"><div class="plus">+</div>
+                </div> <div class="te" >Add New Task</div>
+                
+            </div>
         </div>
-        <div class="link">
-                <div class="icon"><div class="plus">+</div>
-            </div> <div class="te" >Add New Task</div>
+        <div id="todos" class="todocontainer">
+    
+        </div>
+        
+        
+    
+       
+        <div id="todocard">
             
+        </div>
+    </div>
+   
+    <div id="popup2"></div>
+    <div class="popup" id="popup">
+        <h1 class="heading1">Add New List</h1>
+        <input type="text" id="taskname" class="inputext1" placeholder="Add New Item">
+        <button class="create1" onclick="createPopup()">Add</button>
+        <button class="delete1" onclick="hide()">Close</button>
     </div>
 </div>
-    </div>
-    <p></p>
+        
+            
+        
        
-   
+           
+        
+            
+            
+           
+     <script src="./script.js"></script>
     
-        
-        
-       
- <script src="./script.js"></script>
 </body>
 </html>
