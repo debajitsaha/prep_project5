@@ -1,5 +1,11 @@
 var popup=document.getElementById('popup')
 var parent=document.querySelector(".parant")
+var toptext=document.querySelector(".text")
+var topback=document.querySelector(".topback")
+var topheading=document.querySelector(".topheading")
+var hideadd=document.querySelector(".te")
+var noItemMessage = document.getElementById('todotextcon');
+var count=0;
 console.log(popup)
 var taskname=document.getElementById('taskname')
 var isOpen=false
@@ -7,6 +13,16 @@ var todocount=0
 document.querySelector('.link').addEventListener('click',()=>{
 popup.classList.add("show")
 parent.classList.add("parent")
+var allTodos = document.querySelectorAll(".todocard");
+for (var i = 0; i < allTodos.length; i++) {
+  allTodos[i].classList.remove("hidden");
+  allTodos[i].classList.remove("middle")
+}
+//middle.classList.remove("middle")
+toptext.classList.remove("toptext")
+topback.classList.remove("topback1")
+topheading.classList.add("topback")
+hideadd.classList.remove("hidden")
 })
 function hide(){
 popup.classList.remove("show")
@@ -16,9 +32,11 @@ var todos=document.getElementById('todos')
 
 function createPopup(){
     todocount++;
-    
+    count++;
+    toptext.classList.remove("toptext")
+    topback.classList.remove("topback1")
     var newtodo =document.createElement('div')
-    var todoHeading=document.createElement("h1")
+    var todoHeading=document.createElement("h2")
     var tododes=document.createElement('div')
     var deletetodo=document.createElement('button')
     var additem =document.createElement('button')
@@ -37,16 +55,61 @@ function createPopup(){
     additem.classList.add("addtask1")
     deletetodo.classList.add("removetask")
     tododes.id=`sub${todocount}`
-    deletetodo.addEventListener("click",()=>{
-        newtodo.remove()
+    todoHeading.id=`div${todocount}`
+    
+   //heading button 
+   var head=document.getElementById(`div${todocount}`)
+    todoHeading.addEventListener("click",()=>{
+      hideadd.classList.add("hidden")
+      topheading.classList.remove("topback")
+      toptext.classList.add("toptext")
+      topback.classList.add("topback1")
+    //   newtodo.classList.add("discard")
+    var allTodos = document.querySelectorAll(".todocard");
+    
+    for (var i = 0; i < allTodos.length; i++) {
+      allTodos[i].classList.add("hidden");
+    }
+    newtodo.classList.remove("hidden");
+    newtodo.classList.add("middle")
+    toptext.classList.add("toptext");
+    topback.classList.add("topback1");
+    // allTodos.classList.add("middle")
+    topheading.innerHTML = todoHeading.innerHTML;
+    
+
     })
-    var description=document.getElementById("popup2")
-    parent.classList.remove("parent")
-    popup.classList.remove("show")
+    ///back button on navbar
+    var back=document.querySelector(".back")
+      back.addEventListener("click",()=>{
+  
+       var allTodos = document.querySelectorAll(".todocard");
+        for (var i = 0; i < allTodos.length; i++) {
+          allTodos[i].classList.remove("hidden");
+        }
+      newtodo.classList.remove("middle")
+      toptext.classList.remove("toptext")
+      topback.classList.remove("topback1")
+      topheading.classList.add("topback")
+      hideadd.classList.remove("hidden")
+
+})
+
+    toptext.classList.remove("toptext")
+//delete card from container
+     deletetodo.addEventListener("click",()=>{
+        newtodo.remove()
+        count--;
+    })
+      var description=document.getElementById("popup2")
+      parent.classList.remove("parent")
+      popup.classList.remove("show")
+    //click on add item on card
     additem.addEventListener('click',()=>{
         parent.classList.add("parent")
-       var newpop=document.createElement("div")
-       var pophead=document.createElement('h2')
+        //create popup2 child
+        var newpop=document.createElement("div")
+       var pophead=document.createElement('h3')
        var popcreate=document.createElement('div')
        var deletepop=document.createElement('div')
        var inputpop= document.createElement('input')
@@ -55,31 +118,35 @@ function createPopup(){
        newpop.appendChild(inputpop)
        newpop.appendChild(popcreate)
        newpop.appendChild(deletepop)
-       newpop.classList.add("popupclass") 
-       newpop.classList.add("showclass")
-pophead.innerHTML="Add New List"
-pophead.classList.add("heading") 
-inputpop.classList.add("inputext") 
-popcreate.classList.add("create")  
-deletepop.classList.add("delete") 
-popcreate.innerHTML="Add Item"  
-deletepop.innerHTML="Close" 
-//
-deletepop.addEventListener("click",()=>{
-    newpop.remove()
-    parent.classList.remove('parent')
-})                                   
-popcreate.addEventListener("click", () => {
-    newpop.classList.remove("showclass")
-    parent.classList.remove("parent")
-    
-    var inputValue = inputpop.value;
-    addingitem(inputValue); 
-})
+    toptext.classList.remove("toptext")
+    topback.classList.remove("topback1")
+    topheading.classList.add("topback")
+    newpop.classList.add("popupclass") 
+    newpop.classList.add("showclass")
+    pophead.innerHTML="Add New List"
+    pophead.classList.add("heading") 
+    inputpop.classList.add("inputext") 
+    popcreate.classList.add("create")  
+    deletepop.classList.add("delete") 
+    popcreate.innerHTML="Add Item"  
+    deletepop.innerHTML="Close" 
+// delete popup2
+    deletepop.addEventListener("click",()=>{
+       newpop.remove()
+       parent.classList.remove('parent')
+    })   
+//////   popup2 add item function declaration                               
+    popcreate.addEventListener("click", () => {
+       newpop.classList.remove("showclass")
+       parent.classList.remove("parent")
+      var inputValue = inputpop.value;
+       addingitem(inputValue); 
+    })
 })    
 var parades=document.getElementById(`sub${todocount}`)
+//  popup2 add item function call
 function addingitem(inputValue){
-    
+  topheading.classList.add("topback")
     var paradiv=document.createElement('div')
         var para=document.createElement('span')
         var done=document.createElement('button')
@@ -91,26 +158,19 @@ function addingitem(inputValue){
         done.classList.add("done")
         done.addEventListener("click",()=>{
             para.style.textDecoration = "line-through";
+            para.style.textDecorationColor = "white";
+            done.remove()
           })
      
 } 
-    
-
-
-
-
-
-
-
-        // var paradiv=document.createElement('div')
-        // var para=document.createElement('span')
-        // var done=document.createElement('button')
-        // description.appendChild(paradiv)
-        // paradiv.appendChild(para)
-        // paradiv.appendChild(done)
-        // para.innerHTML="success"
-        // done.innerHTML="Done"
-   
-       
-    
+checkEmpty();
 }
+function checkEmpty() {
+  if (count === 0) {
+
+    noItemMessage.style.display = "block";
+  } else {
+    noItemMessage.style.display = "none";
+  }
+}
+    
