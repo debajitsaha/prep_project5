@@ -109,7 +109,7 @@ function createPopup(){
         parent.classList.add("parent")
         //create popup2 child
         var newpop=document.createElement("div")
-       var pophead=document.createElement('h3')
+       var pophead=document.createElement('h2')
        var popcreate=document.createElement('div')
        var deletepop=document.createElement('div')
        var inputpop= document.createElement('input')
@@ -128,7 +128,7 @@ function createPopup(){
     inputpop.classList.add("inputext") 
     popcreate.classList.add("create")  
     deletepop.classList.add("delete") 
-    popcreate.innerHTML="Add Item"  
+    popcreate.innerHTML="Add"  
     deletepop.innerHTML="Close" 
 // delete popup2
     deletepop.addEventListener("click",()=>{
@@ -153,6 +153,7 @@ function addingitem(inputValue){
         parades.appendChild(paradiv)
         paradiv.appendChild(para)
         paradiv.appendChild(done)
+        paradiv.classList.add("innerdiv1")
         para.innerHTML=inputValue
         done.innerHTML="Done"
         done.classList.add("done")
