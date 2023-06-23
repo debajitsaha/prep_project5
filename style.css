@@ -331,13 +331,13 @@ margin-right: 200px;
     }
     .topheading{
         height: 30px;
-
+     width: auto;
         color:beige;
         font-size: 20px;
         /* margin-right: 1px; */
         margin-top: 27px;
-        width: 100px;
-        margin-right: 10px;
+        /* width: 100px; */
+        margin-right: 0px;
         margin-left: 0px;
     }
     .text{
@@ -372,6 +372,7 @@ margin-right: 200px;
         background-color:rgb(74, 226, 125);
         border-radius: 50%;
         justify-content: center;
+        margin-top: 4px;
     
     }
     
@@ -419,7 +420,7 @@ margin-right: 200px;
     .back{
         display: flex;
       margin-left: 0px;
-        margin-top: 30px; 
+        margin-top: 25px; 
     }
     .topback{
         display: none;
@@ -437,7 +438,7 @@ margin-right: 200px;
     
     .teback{
         height: 40px; 
-       width: 100px;
+       width: 40px;
       padding-left:5px;
      margin-top: 2px;
       font-weight:2px;
@@ -602,14 +603,7 @@ margin-right: 200px;
         background-color: rgb(238, 33, 6);
         
        }
-       .done{
-        border-radius: 20px;
-        height: 28px;
-        width: auto;
-        margin: 5px;
-        background-color: blue;
-        color: bisque;
-       }
+      
     .toptext{
         display: none;
     }
