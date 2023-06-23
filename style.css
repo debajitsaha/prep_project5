@@ -6,9 +6,6 @@ body{
     padding:0;
     background-color: black;
 }
-.main{
-    position: relative;
-}
 .navbar{
     height: 85px;
    display: flex;
@@ -183,9 +180,7 @@ body{
    .parent{
        filter: blur(10px);
    }
-   .parent{
-    filter: blur(20px);
-}
+   
    .heading{
       text-align: center;
       padding-top: 25px;
@@ -323,13 +318,7 @@ body{
 margin-right: 200px;
 }
 /* ------------------------------ mobile view ------------------------------------------------------- */
-
-
-
-
-
-
-@media only screen and (max-width: 500px) {
+@media screen and (min-width:250px) and (max-width: 500px){
    
     .navbar{
         height: 85px;
@@ -364,7 +353,7 @@ margin-right: 200px;
     }
     /* .task{
         /* margin-left: 70px; */
-    } */
+    
     .li{
         color:rgb(8, 230, 219);
         /* margin-left: 100px; */
@@ -494,13 +483,7 @@ margin-right: 200px;
         padding-bottom: 40px;
         position: relative;
     }
-    /* .textcontainer{
-        display:inline;
-        background-color: bisque;
-       height: 50%;
-       width: 90%;
-       flex-flow: column wrap;
-    } */
+ 
     .popupclass{
      display: none;
         height: 200px;
@@ -656,5 +639,5 @@ margin-right: 200px;
     .topright{
     margin-right: 200px;
     }
-     
 }
+
