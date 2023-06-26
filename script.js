@@ -110,6 +110,16 @@ function createPopup(){
      deletetodo.addEventListener("click",()=>{
         newtodo.remove()
         
+        var allTodos = document.querySelectorAll(".todocard");
+        for (var i = 0; i < allTodos.length; i++) {
+          allTodos[i].classList.remove("hidden");
+        }
+      newtodo.classList.remove("middle")
+      toptext.classList.remove("toptext")
+      topback.classList.remove("topback1")
+      topheading.classList.add("topback")
+      // todoHeading.classList.remove("toback1")
+      hideadd.classList.remove("hidden")
         
         count--;
         checkEmpty();

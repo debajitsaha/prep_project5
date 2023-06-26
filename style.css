@@ -151,7 +151,7 @@ body{
     width:200px;
     min-height:52vh;
     text-align: center;
-    padding: 20px;
+    padding: 16px;
     margin: 25px;
     padding-bottom: 40px;
     position: relative;
@@ -497,7 +497,7 @@ margin-right: 200px;
        width: 86vw;
        flex-flow: row wrap;
     }
-    .todocard{
+    /* .todocard{
         border: 2px solid;
         border-radius: 20px;
         background-color: rgb(179, 167, 194);
@@ -508,7 +508,7 @@ margin-right: 200px;
         margin: 25px;
         padding-bottom: 40px;
         position: relative;
-    }
+    } */
  
     .popupclass{
      display: none;
