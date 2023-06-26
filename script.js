@@ -190,6 +190,7 @@ function addingitem(inputValue){
         paradiv.appendChild(done)
         paradiv.classList.add("innerdiv1")
         para.innerHTML=inputValue
+        para.style.fontSize="17px"
         done.innerHTML="Done"
         done.classList.add("done")
         done.addEventListener("click",()=>{
