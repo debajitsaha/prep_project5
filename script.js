@@ -109,8 +109,11 @@ function createPopup(){
 //delete card from container
      deletetodo.addEventListener("click",()=>{
         newtodo.remove()
+        
+        
         count--;
         checkEmpty();
+        console.log(count)
     })
       var description=document.getElementById("popup2")
       parent.classList.remove("parent")
@@ -189,7 +192,6 @@ function addingitem(inputValue){
 }
 function checkEmpty() {
   if (count === 0) {
- console.log(count)
     noItemMessage.style.display = "block";
   } else {
     noItemMessage.style.display = "none";
