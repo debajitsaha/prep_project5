@@ -6,11 +6,14 @@ var topheading=document.querySelector(".topheading")
 var hideadd=document.querySelector(".te")
 var noItemMessage = document.getElementById('todotextcon');
 var count=0;
+var countheading;
 console.log(popup)
 var taskname=document.getElementById('taskname')
 var isOpen=false
 var todocount=0
 document.querySelector('.link').addEventListener('click',()=>{
+  count++;
+  countheading=false;
 popup.classList.add("show")
 parent.classList.add("parent")
 var allTodos = document.querySelectorAll(".todocard");
@@ -23,6 +26,7 @@ toptext.classList.remove("toptext")
 topback.classList.remove("topback1")
 topheading.classList.add("topback")
 hideadd.classList.remove("hidden")
+checkEmpty();
 })
 function hide(){
 popup.classList.remove("show")
@@ -31,20 +35,23 @@ parent.classList.remove("parent")
 var todos=document.getElementById('todos')
 
 function createPopup(){
+ 
     todocount++;
-    count++;
+    
     toptext.classList.remove("toptext")
     topback.classList.remove("topback1")
     var newtodo =document.createElement('div')
     var todoHeading=document.createElement("h2")
     var tododes=document.createElement('div')
-    var deletetodo=document.createElement('button')
-    var additem =document.createElement('button')
+    var deletetodo=document.createElement('img')
+    var additem =document.createElement('img')
     todos.appendChild(newtodo)
     newtodo.appendChild(todoHeading)
     newtodo.appendChild(tododes)
     newtodo.appendChild(additem)
     newtodo.appendChild(deletetodo)
+    deletetodo.src="./delete-icon-image-17.jpg"
+    additem.src="./create icon.png";
     todoHeading.innerHTML=taskname.value
     var hr = document.createElement('hr');
   todoHeading.insertAdjacentElement('afterend', hr);
@@ -64,6 +71,7 @@ function createPopup(){
       topheading.classList.remove("topback")
       toptext.classList.add("toptext")
       topback.classList.add("topback1")
+      countheading=true;
     //   newtodo.classList.add("discard")
     var allTodos = document.querySelectorAll(".todocard");
     
@@ -91,7 +99,9 @@ function createPopup(){
       toptext.classList.remove("toptext")
       topback.classList.remove("topback1")
       topheading.classList.add("topback")
+      // todoHeading.classList.remove("toback1")
       hideadd.classList.remove("hidden")
+      countheading=false;
 
 })
 
@@ -100,6 +110,7 @@ function createPopup(){
      deletetodo.addEventListener("click",()=>{
         newtodo.remove()
         count--;
+        checkEmpty();
     })
       var description=document.getElementById("popup2")
       parent.classList.remove("parent")
@@ -108,6 +119,7 @@ function createPopup(){
     additem.addEventListener('click',()=>{
         parent.classList.add("parent")
         //create popup2 child
+       
         var newpop=document.createElement("div")
        var pophead=document.createElement('h2')
        var popcreate=document.createElement('div')
@@ -137,6 +149,15 @@ function createPopup(){
     })   
 //////   popup2 add item function declaration                               
     popcreate.addEventListener("click", () => {
+      topheading.classList.add("topback")
+       if(countheading)
+       {
+        hideadd.classList.add("hidden")
+        topheading.classList.remove("topback")
+        toptext.classList.add("toptext")
+        topback.classList.add("topback1")
+        
+       }console.log(countheading)
        newpop.classList.remove("showclass")
        parent.classList.remove("parent")
       var inputValue = inputpop.value;
@@ -146,7 +167,7 @@ function createPopup(){
 var parades=document.getElementById(`sub${todocount}`)
 //  popup2 add item function call
 function addingitem(inputValue){
-  topheading.classList.add("topback")
+  
     var paradiv=document.createElement('div')
         var para=document.createElement('span')
         var done=document.createElement('button')
@@ -164,11 +185,11 @@ function addingitem(inputValue){
           })
      
 } 
-checkEmpty();
+
 }
 function checkEmpty() {
   if (count === 0) {
-
+ console.log(count)
     noItemMessage.style.display = "block";
   } else {
     noItemMessage.style.display = "none";

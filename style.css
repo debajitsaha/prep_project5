@@ -15,6 +15,7 @@ body{
 
 }
 .topheading{
+    display: block;
     color:beige;
     font-size: 45px;
     margin-right: 175px;
@@ -26,7 +27,7 @@ body{
     text-align:center;
     /* background-color: aqua; */
     font-size: 40px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
       margin:20px;
     margin-left: -20px;
 
@@ -64,8 +65,8 @@ body{
     height: 20px;
    width: 21px;
    text-align:center;
- margin-left: 8px;  
- margin-top: 2px; 
+ margin-left: 6px;  
+ margin-top: 0px; 
  color: white;
 }
 .ac{
@@ -84,8 +85,8 @@ body{
   /* margin-bottom: 10px; */
 }
 .lessthen{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     background-color:rgb(53, 156, 241);
     border-radius: 50%;
     justify-content: center;  
@@ -124,7 +125,7 @@ body{
     height: 200px;
     width: 330px;
     top:35%;
-    left:35%;
+    left:38%;
     background-color:rgb(241, 225, 171);
     border-radius: 10px;
     color:rgb(233, 110, 10);
@@ -135,12 +136,12 @@ body{
     display:block;
 }
 .todocontainer{
-    margin-left: 85px;
+    margin-left: 70px;
     display: flex;
     justify-content: space-between;
     /* border: 2px solid black;
     background-color: bisque; */
-   width: 86vw;
+   width: 90vw;
    flex-flow: row wrap;
 }
 .todocard{
@@ -257,32 +258,32 @@ body{
     font-size: 20px;
 }
 .addtask1{
- height: 30px;
+ height: 35px;
  width: auto;
- border: 2px solid green;
+ border: 2px solid  rgb(179, 167, 194);
  position: absolute;
- bottom:10px;
- left:110px;
+ bottom: 7px;
+ left:180px;
+ 
  border-radius: 10px;
- color:white;
- background-color: green;
+ background-color: rgb(179, 167, 194);
 
 }
 .removetask{
     height: 30px;
     width: auto;
-    border: 2px solid green;
+    border: 2px solid  rgb(179, 167, 194);
     position: absolute;
-    bottom: 10px;
-    left:160px;
+    bottom:8px;
+    left:135px;
     border-radius: 10px;
     color:white;
-    background-color: rgb(238, 33, 6);
+    background-color: rgb(210, 216, 221);
     
    }
    .done{
     border-radius: 20px;
-    height: 28px;
+    height: 20px;
     width: auto;
     margin: 5px;
     background-color: blue;
@@ -306,8 +307,8 @@ body{
 #todotextcon{
     color: white;
     margin-top: 50px;
-    margin-left: 360px;
-    font-size: 42px;
+    margin-left: 380px;
+    font-size: 41px;
 }
 .innerdiv1{
    overflow: hidden;
@@ -448,12 +449,12 @@ margin-right: 200px;
     }
     .popup{
         display:none;
-        border: 2px solid black;
+        border: 2px solid;
         position:fixed;
         height: 200px;
         width: 280px;
-        top:20%;
-        left:5%;
+        top:30%;
+        left:10%;
         background-color:rgb(241, 225, 171);
         border-radius: 10px;
         color:rgb(233, 110, 10);
@@ -464,7 +465,7 @@ margin-right: 200px;
         display:block;
     }
     .todocontainer{
-        margin-left:10px;
+        margin-left:30px;
         display: flex;
         justify-content: space-between;
         /* border: 2px solid black;
@@ -493,8 +494,8 @@ margin-right: 200px;
         background-color:rgb(211, 193, 154);
         border-radius: 10px;
         color:rgb(233, 110, 10);
-       top:20%;
-       left:10%;
+       top:30%;
+       left:11%;
        }
        .showclass{
         display: block;
@@ -506,11 +507,11 @@ margin-right: 200px;
        }
        .heading{
           text-align: center;
-          padding-top: 25px;
+          padding-top: 15px;
        }
        .heading1{
         text-align: center;
-          padding-top: 18px;
+          padding-top: 14px;
        }
        .head{
            text-align: center;
@@ -579,30 +580,6 @@ margin-right: 200px;
         text-align: center;
         font-size: 20px;
     }
-    .addtask1{
-     height: 30px;
-     width: auto;
-     border: 2px solid green;
-     position: absolute;
-     bottom:10px;
-     left:110px;
-     border-radius: 10px;
-     color:white;
-     background-color: green;
-    
-    }
-    .removetask{
-        height: 30px;
-        width: auto;
-        border: 2px solid green;
-        position: absolute;
-        bottom: 10px;
-        left:160px;
-        border-radius: 10px;
-        color:white;
-        background-color: rgb(238, 33, 6);
-        
-       }
       
     .toptext{
         display: none;
@@ -622,7 +599,7 @@ margin-right: 200px;
     #todotextcon{
         color: white;
         margin-top: 50px;
-        margin-left: 40px;
+        margin-left: 65px;
         font-size: 20px;
     }
     .innerdiv1{
