@@ -125,7 +125,7 @@ body{
     height: 200px;
     width: 330px;
     top:35%;
-    left:38%;
+    left:36%;
     background-color:rgb(241, 225, 171);
     border-radius: 10px;
     color:rgb(233, 110, 10);
@@ -146,10 +146,10 @@ body{
 }
 .todocard{
     border: 2px solid;
-    border-radius: 20px;
+    border-radius: 19px;
     background-color: rgb(179, 167, 194);
     width:200px;
-    min-height:50vh;
+    min-height:52vh;
     text-align: center;
     padding: 20px;
     margin: 25px;
@@ -172,40 +172,45 @@ body{
     border-radius: 10px;
     color:rgb(233, 110, 10);
    top:35%;
-   left:35%;
+   left:36%;
    }
    .showclass{
     display: block;
    }
    
    .parent{
-       filter: blur(10px);
+       filter: blur(20px);
    }
    
    .heading{
       text-align: center;
       padding-top: 15px;
+      margin-left: 20px;
    }
    .heading1{
     text-align: center;
       padding-top: 15px;
+      margin-left: 20px;
       
    }
    .head{
        text-align: center;
        justify-content: center;
        align-self: center;
-       margin-left: 50px;
+       margin-top: 5px;
+       /* margin-left: 50px; */
     }
    .inputext{
        height: 28px;
        width: 230px;
        margin-left: 51px;
+       text-align: center;
    }
    .inputext1{
     height: 25px;
     width: 220px;
     margin-left: 20px;
+    text-align: center;
    }
    .create{
        height: 35px;
@@ -536,7 +541,8 @@ margin-right: 200px;
            text-align: center;
            justify-content: center;
            align-self: center;
-           margin-left: 50px;
+           /* margin-left: 50px; */
+           margin-top: 1px;
         }
        .inputext{
            height: 28px;

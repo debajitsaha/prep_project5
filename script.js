@@ -52,6 +52,7 @@ function createPopup(){
     newtodo.appendChild(deletetodo)
     deletetodo.src="./delete-icon-image-17.jpg"
     additem.src="./create icon.png";
+    todoHeading.classList.add("head")
     todoHeading.innerHTML=taskname.value
     var hr = document.createElement('hr');
   todoHeading.insertAdjacentElement('afterend', hr);
@@ -65,7 +66,6 @@ function createPopup(){
     todoHeading.id=`div${todocount}`
     
    //heading button 
-   var head=document.getElementById(`div${todocount}`)
     todoHeading.addEventListener("click",()=>{
       hideadd.classList.add("hidden")
       topheading.classList.remove("topback")
@@ -133,6 +133,7 @@ function createPopup(){
        newpop.appendChild(inputpop)
        newpop.appendChild(popcreate)
        newpop.appendChild(deletepop)
+       inputpop.setAttribute("placeholder", "Add New List");
     toptext.classList.remove("toptext")
     topback.classList.remove("topback1")
     topheading.classList.add("topback")
