@@ -193,6 +193,9 @@ function addingitem(inputValue){
         done.innerHTML="Done"
         done.classList.add("done")
         done.addEventListener("click",()=>{
+            para.style.color="orange"
+            para.style.fontSize="22px"
+         
             para.style.textDecoration = "line-through";
             para.style.textDecorationColor = "white";
             done.remove()
